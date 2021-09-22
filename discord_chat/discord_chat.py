@@ -10,7 +10,6 @@ BaseRequest.MEMFILE_MAX = 1024 * 1024 * 100
 
 
 global OUTPUT_DIRECTORY, WEBHOOK_URL
-ICON_URL = 'https://media.comicbook.com/2020/04/nintendo-switch-1216348-1280x0.jpeg'
 
 @route('/', method='POST')
 def index():
