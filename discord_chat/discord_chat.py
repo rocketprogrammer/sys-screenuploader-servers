@@ -4,7 +4,7 @@ import os
 
 import click
 from bottle import route, run, request, BaseRequest, HTTPError, default_app
-from discord_webhook import DiscordWebhook, DiscordEmbed
+from discord_webhook import DiscordWebhook
 
 BaseRequest.MEMFILE_MAX = 1024 * 1024 * 100
 
@@ -27,7 +27,7 @@ def index():
                 break
             f.write(chunk)
 
-    webhook = DiscordEmbed(url=WEBHOOK_URL, title='Switch', description = "Screenshots from Rocket's Switch", color='03b2f8')
+    webhook = DiscordWebhook(url=WEBHOOK_URL, username='Switch')
     webhook.set_author(name='Nintendo Switch', url='https://nintendo.com', icon_url=ICON_URL)
 
     with open(fpath, "rb") as f:

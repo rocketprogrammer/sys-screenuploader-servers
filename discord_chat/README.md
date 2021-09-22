@@ -1,5 +1,5 @@
-### [local_dir.py](./local_dir.py)
-Saves sent media to a local directory
+### [discord_chat.py](./discord_chat.py)
+Saves sent media to a Discord channel via a webhook.
 
 Install [requirements](./requirements.txt):
 
@@ -11,4 +11,4 @@ Requirements: just common
 
 ### [docker-compose.yaml](./docker/docker-compose.yaml)
 Configure settings with `.env`
-Deploy local_dir on Docker using `docker-compose up -d --build`
+Deploy discord_chat on Docker using `docker-compose up -d --build`
