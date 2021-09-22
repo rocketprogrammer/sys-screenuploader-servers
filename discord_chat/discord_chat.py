@@ -44,10 +44,10 @@ def index():
 @click.option('--output', '-o', envvar='OUTPUT_DIR', default='output',
               type=click.Path(file_okay=False, writable=True, resolve_path=True))
 @click.option('--webhook-url', '-w', envvar='WEBHOOK_URL', type=str)
-def start(host, port, output, webhookUrl):
+def start(host, port, output, webhook_url):
     global OUTPUT_DIRECTORY, WEBHOOK_URL
     OUTPUT_DIRECTORY = output
-    WEBHOOK_URL = webhookUrl
+    WEBHOOK_URL = webhook_url
     os.makedirs(output, exist_ok=True)
     run(host=host, port=port)
 
