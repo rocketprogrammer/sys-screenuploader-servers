@@ -27,8 +27,7 @@ def index():
                 break
             f.write(chunk)
 
-    webhook = DiscordWebhook(url=WEBHOOK_URL, username='Switch')
-    webhook.set_author(name='Nintendo Switch', url='https://nintendo.com', icon_url=ICON_URL)
+    webhook = DiscordWebhook(url=WEBHOOK_URL)
 
     with open(fpath, "rb") as f:
         webhook.add_file(file=f.read(), filename=filename)
