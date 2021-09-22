@@ -27,7 +27,7 @@ def index():
                 break
             f.write(chunk)
 
-    embed = DiscordEmbed(title='Switch', description = "Screenshots from Rocket's Switch", color='03b2f8')
+    embed = DiscordEmbed(url=WEBHOOK_URL, title='Switch', description = "Screenshots from Rocket's Switch", color='03b2f8')
     embed.set_author(name='Nintendo Switch', url='https://nintendo.com', icon_url=ICON_URL)
 
     with open(fpath, "rb") as f:
