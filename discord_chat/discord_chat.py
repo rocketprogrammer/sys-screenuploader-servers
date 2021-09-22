@@ -11,6 +11,7 @@ BaseRequest.MEMFILE_MAX = 1024 * 1024 * 100
 
 global OUTPUT_DIRECTORY, WEBHOOK_URL
 
+
 @route('/', method='POST')
 def index():
     if 'filename' not in request.params:
